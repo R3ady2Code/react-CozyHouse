@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Slider from '../Logic/Slider';
+import MySlider from '../Logic/MySlider';
 import Button from '../UI/Button';
 
 const Pets = () => {
@@ -11,7 +11,7 @@ const Pets = () => {
           Our friends who <br />
           are looking for a house
         </h3>
-        <Slider />
+        <MySlider />
         <Button className="btn_primary">Get to know the rest</Button>
       </div>
     </section>
