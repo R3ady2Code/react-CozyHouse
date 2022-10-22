@@ -1,0 +1,29 @@
+$light-xl: #ffffff;
+$light-l: #f6f6f6;
+$light-s: #fafafa;
+$dark-s: #cdcdcd;
+$dark-m: #b2b2b2;
+$dark-l: #545454;
+$dark-xl: #4c4c4c;
+$dark-2xl: #444444;
+$dark-3xl: #292929;
+$primary: #f1cdb3;
+$primary-light: #fddcc4;
+
+.navigation__item_dark {
+  color: $dark-l;
+  transition: all 0.1s;
+  &:hover {
+    color: $dark-3xl;
+  }
+  &_active {
+    color: $dark-3xl;
+
+    padding-right: 1px;
+
+    text-decoration: underline;
+    text-decoration-color: $primary;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 3px;
+  }
+}

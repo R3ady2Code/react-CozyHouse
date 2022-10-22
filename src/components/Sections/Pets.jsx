@@ -5,9 +5,9 @@ import Button from '../UI/Button';
 
 const Pets = () => {
   return (
-    <section class="pets">
-      <div class="container">
-        <h3 class="h3-text">
+    <section className="pets">
+      <div className="container">
+        <h3 className="h3-text title">
           Our friends who <br />
           are looking for a house
         </h3>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 import HelpItem from '../Logic/HelpItem';
 
 const Help = () => {
@@ -23,7 +25,12 @@ const Help = () => {
         </h3>
         <div className="help__flex">
           {icons.map((icon) => (
-            <HelpItem key={icon.id} {...icon} />
+            <AnimationOnScroll
+              animateIn="animate__fadeIn"
+              animateOut="animate__fadeOutUp"
+              duration={0.5}>
+              <HelpItem key={icon.id} {...icon} />
+            </AnimationOnScroll>
           ))}
         </div>
       </div>

@@ -4,9 +4,9 @@ import cardSrc from '../../img/credit-card.svg';
 
 const CreditCard = () => {
   return (
-    <div class="credit-card">
+    <div className="credit-card">
       <img src={cardSrc} alt="credit-card" />
-      <h4 class="h4-text">8380 2880 8028 8791 7435</h4>
+      <h4 className="h4-text">8380 2880 8028 8791 7435</h4>
     </div>
   );
 };

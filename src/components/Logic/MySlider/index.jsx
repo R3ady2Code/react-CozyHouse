@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import Slide from './Slide';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
+import PopUp from './Slide/PopUp';
 
 const MySlider = () => {
   const pets = [
@@ -33,12 +34,23 @@ const MySlider = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
+  const [openPopUp, setOpenPopUp] = React.useState(false);
+
   return (
-    <Slider {...settings}>
-      {pets.map((slider) => (
-        <Slide key={slider.id} index={slider.id} {...slider} />
-      ))}
-    </Slider>
+    <>
+      <Slider {...settings}>
+        {pets.map((slider) => (
+          <Slide
+            key={slider.id}
+            index={slider.id}
+            {...slider}
+            openPopUp={() => setOpenPopUp(true)}
+          />
+        ))}
+      </Slider>
+      {openPopUp && <PopUp closeModal={() => setOpenPopUp(false)} />}
+    </>
   );
 };
 

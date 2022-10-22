@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Logo = () => {
+const Logo = ({ dark }) => {
   return (
     <h1>
-      <p class="logo-title color-primary">Cozy House</p>
-      <p class="logo-subtitle color-light">Shelter for pets in Boston</p>
+      <p className={`logo-title  ${dark ? 'color-dark-l' : 'color-primary'}`}>Cozy House</p>
+      <p className={`logo-subtitle  ${dark ? 'color-dark-3xl' : 'color-light'}`}>
+        Shelter for pets in Boston
+      </p>
     </h1>
   );
 };

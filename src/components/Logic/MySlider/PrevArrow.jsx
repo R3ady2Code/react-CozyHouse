@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrevArrow = ({ onClick }) => {
   return (
-    <button onClick={onClick} className="slider__arrow slider__arrow_rigth">
+    <button onClick={onClick} className="btn_circle btn_circle_rigth">
       &#8592;
     </button>
   );

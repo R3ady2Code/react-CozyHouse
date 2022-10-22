@@ -1,15 +1,14 @@
-import { Header, About, Pets, Help, Donation, Footer } from './components/Sections';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
+import Pets from './pages/Pets';
 
 function App() {
   return (
-    <>
-      <Header />
-      <About />
-      <Pets />
-      <Help />
-      <Donation />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/pets" element={<Pets />} />
+    </Routes>
   );
 }
 
