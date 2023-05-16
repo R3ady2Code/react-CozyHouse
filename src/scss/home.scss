@@ -129,10 +129,6 @@ $primary-light: #fddcc4;
   margin-bottom: 59px;
 }
 
-.slick-list {
-  padding-left: 45px;
-}
-
 .btn_circle {
   border: none;
   cursor: pointer;
@@ -148,7 +144,7 @@ $primary-light: #fddcc4;
   }
 }
 
-.slider__item {
+.pet-card {
   display: flex;
   flex-direction: column;
   align-items: center;

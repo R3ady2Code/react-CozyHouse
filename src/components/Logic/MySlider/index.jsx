@@ -1,10 +1,9 @@
 import React from 'react';
-import Slider from 'react-slick';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 
-import Slide from './Slide';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
-import PopUp from './Slide/PopUp';
+import PopUp from '../PetPopUp';
 
 const MySlider = () => {
   const pets = [
@@ -27,30 +26,14 @@ const MySlider = () => {
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
 
-  const settings = {
-    speed: 500,
-    slidesToShow: width >= 1280 ? 3 : width >= 768 ? 2 : width >= 320 && 1,
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-  };
-
-  const [openPopUp, setOpenPopUp] = React.useState(false);
-
   return (
-    <>
-      <Slider {...settings}>
+    <CarouselProvider naturalSlideWidth={900} naturalSlideHeight={600} totalSlides={6}>
+      <Slider>
         {pets.map((slider) => (
-          <Slide
-            key={slider.id}
-            index={slider.id}
-            {...slider}
-            openPopUp={() => setOpenPopUp(true)}
-          />
+          <Slide key={slider.id} index={slider.id} pet={slider} />
         ))}
       </Slider>
-      {openPopUp && <PopUp closeModal={() => setOpenPopUp(false)} />}
-    </>
+    </CarouselProvider>
   );
 };
 
